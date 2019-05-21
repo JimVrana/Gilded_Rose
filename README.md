@@ -9,6 +9,7 @@ There are two user roles, one for general users, 'Users' and one for administrat
 The ClaimInjectorWebApplicationFactory was found at https://github.com/jabbera/aspnetcore-testing-role-handler to make testing of the roles easier to implement.
 
 Sample Token Request:
+```HTTP
 	POST /api/Users/authenticate HTTP/1.1
 	Host: localhost:44315
 	Content-Type: application/json
@@ -26,7 +27,9 @@ Sample Token Request:
 			"username": "admin",
 			"password": "admin"
 	}
+```
 Sample Token response:
+```JSON
 	{
 			"id": 1,
 			"firstName": "Admin",
@@ -50,9 +53,10 @@ Sample Token response:
 			"lockoutEnabled": false,
 			"accessFailedCount": 0
 	}
+```
 
-
-Sample request:
+Sample request with token:
+```HTTP
 	GET /api/values HTTP/1.1
 	Host: localhost:44315
 	Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJyb2xlIjoiVXNlciIsIm5iZiI6MTU1ODQ0MTI0MywiZXhwIjoxNTU5MDQ2MDQzLCJpYXQiOjE1NTg0NDEyNDN9.Fq0OrDCZbXSTI1fGU_xh9NpVntiv4rN32W0xZqC6RbI
@@ -64,6 +68,8 @@ Sample request:
 	accept-encoding: gzip, deflate
 	Connection: keep-alive
 	cache-control: no-cache
-
+```
 Sample response:
+```JSON
 	["value1","value2"]
+```
