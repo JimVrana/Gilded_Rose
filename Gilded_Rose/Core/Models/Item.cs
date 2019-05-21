@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Gilded_Rose.Core.Models
 {
-    class Item: BaseModel
+    public class Item: BaseModel
     {
         public string Name { get; set; }
         public string Description { get; set; }
         public int Price { get; set; }
+
+        internal Item() { }
+
+
     }
 }
