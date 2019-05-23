@@ -2,8 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Text;
-//using Gilded_Rose.Helpers;
-using Gilded_Rose.Core.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,6 +11,7 @@ using Gilded_Rose.Core.Interfaces;
 using Gilded_Rose.Infrastructure.Data;
 using Gilded_Rose.Infrastructure.Data.Repositories;
 using Gilded_Rose.Helpers;
+using Gilded_Rose.Core.Services;
 
 namespace Gilded_Rose
 {

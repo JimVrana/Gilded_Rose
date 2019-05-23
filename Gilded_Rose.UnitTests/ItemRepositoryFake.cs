@@ -1,9 +1,6 @@
 ﻿using Gilded_Rose.Core.Models;
 using Gilded_Rose.Core.Interfaces;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Linq;
 
 namespace Gilded_Rose.UnitTests

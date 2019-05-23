@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Gilded_Rose.Core.Models;
-//using Gilded_Rose.Helpers;
 using Microsoft.Extensions.Options;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
@@ -77,8 +75,6 @@ namespace Gilded_Rose.Core.Services
 
             //generate jwt token
             var tokenHandler = new JwtSecurityTokenHandler();
-
-            //the secret would be stored elsewhere in a production environment
             var SecretKey = Encoding.ASCII.GetBytes(_appSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {

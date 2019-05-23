@@ -1,8 +1,5 @@
 ﻿using Gilded_Rose.Core.Models;
 using Gilded_Rose.Infrastructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Gilded_Rose.IntegrationTests
 {

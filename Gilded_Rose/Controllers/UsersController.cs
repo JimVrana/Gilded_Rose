@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Gilded_Rose.Core.Models;
-using Gilded_Rose.Services;
 using Gilded_Rose.Core.Interfaces;
 
 namespace Gilded_Rose.Controllers

@@ -1,12 +1,7 @@
-﻿using System.Net;
-using System.Threading.Tasks;
-using Gilded_Rose.Controllers;
-using Gilded_Rose.Core.Models;
+﻿using Gilded_Rose.Controllers;
 using Gilded_Rose.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Moq;
 using Xunit;
-using System.Linq;
 using FluentAssertions;
 using Gilded_Rose.Core.Services;
 

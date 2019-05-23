@@ -1,19 +1,14 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Gilded_Rose.Core.Models;
 using Gilded_Rose.Core.Interfaces;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Gilded_Rose.Controllers
 {
-    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ItemsController : ControllerBase
     {
         private readonly IItemRepository _itemRepository;
-
 
         public ItemsController(IItemRepository itemRepository)
         {
@@ -21,16 +16,13 @@ namespace Gilded_Rose.Controllers
         }
 
         // GET api/items
-      //  [Authorize(Roles ="Admin,ApiUser")]
         [HttpGet]
         public ActionResult Get()
         {
-            //return new string[] { "value1", "value2" };
             return  Ok(_itemRepository.ListAll());
         }
 
         // GET api/items/5
-      //  [Authorize(Roles = "Admin,ApiUser")]
         [HttpGet("{itemId}")]
         public ActionResult Get(int itemId)
         {
@@ -43,6 +35,5 @@ namespace Gilded_Rose.Controllers
 
             return  Ok(item);
         }
-
     }
 }
