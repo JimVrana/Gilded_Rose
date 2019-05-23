@@ -1,22 +1,27 @@
 # Gilded_Rose
 
-Assumptions:
-	* If this were not a test assessment, the password would be encoded as a base64 string by the calling program and then decoded by the API.
-	* A list of valid users is contained in the UserService.  This would normally be pulled from active directory or a database.
-		* Valid usernames/passwords/roles:
-			* admin/admin/Admin
-			* jvrana/test/ApiUser
-			* testuser/test/User
+**Assumptions:**
+* If this were not a test assessment, the password would be encoded as a base64 string by the calling program and then decoded by the API.
+* A list of valid users is contained in the UserService.  This would normally be pulled from active directory or a database.
+  * Valid usernames/passwords/roles:
+    * admin/admin/Admin
+    * jvrana/test/ApiUser
+    * testuser/test/User
 	
 	
 
 I added a base entity class to include Id, date created and date modified to each object. Id the primary key of each.
 
-The item class will also contain an available quantity.  This would normally be separated out into an inventory system, but for a sample application I can run tests for availability of items.  
+The item class also contains an available quantity.  This would normally be separated out into an inventory system, but for a sample application I can run tests for availability of items.  
 
-Ordering of an item checks the available quantity and if the order quantity is less than the available quantity, the order is "placed".
+Ordering of an item checks the available quantity and if the order quantity is less than the available quantity, the order is "placed". Individual orders do not modify the available quantity of items, so that number does not change.
 
-There are three user roles, one for general users, 'User' and one for administrators, 'Admin', one for ApiUsers, 'ApiUser'.  Api calls are not available for the 'User' role and will return Unauthorized.
+There are three user roles: 
+* for general users, 'User' 
+* for administrators, 'Admin'
+* for ApiUsers, 'ApiUser'  
+
+Api calls are not available for the 'User' role and will return Unauthorized.
 
 The ClaimInjectorWebApplicationFactory was found at https://github.com/jabbera/aspnetcore-testing-role-handler to make testing of the roles easier to implement.
 
