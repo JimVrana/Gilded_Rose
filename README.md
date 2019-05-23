@@ -9,6 +9,7 @@
     * testuser/password2/User
 	
 	
+The Secret key is localed in the appsettings.json file.
 
 I added a base entity class to include Id, date created and date modified to each object. Id the primary key of each.
 
@@ -22,6 +23,8 @@ There are three user roles:
 * for ApiUsers, 'ApiUser'  
 
 Api calls are not available for the 'User' role and will return Unauthorized.
+
+Authorization is only on the Orders Controller.  
 
 The ClaimInjectorWebApplicationFactory was found at https://github.com/jabbera/aspnetcore-testing-role-handler to make testing of the roles easier to implement.
 
