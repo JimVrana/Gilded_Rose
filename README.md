@@ -1,12 +1,12 @@
 # Gilded_Rose
 
 Assumptions:
-	If this were not a test assessment, the password would be encoded as a base64 string by the calling program and then decoded by the API.
-	A list of valid users is contained in the UserService.  This would normally be pulled from active directory or a database.
-		Valid usernames/passwords/roles:
-			admin/admin/Admin
-			jvrana/test/ApiUser
-			testuser/test/User
+	* If this were not a test assessment, the password would be encoded as a base64 string by the calling program and then decoded by the API.
+	* A list of valid users is contained in the UserService.  This would normally be pulled from active directory or a database.
+		* Valid usernames/passwords/roles:
+			* admin/admin/Admin
+			* jvrana/test/ApiUser
+			* testuser/test/User
 	
 	
 
