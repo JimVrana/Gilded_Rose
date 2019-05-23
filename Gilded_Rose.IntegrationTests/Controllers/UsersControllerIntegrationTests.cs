@@ -71,8 +71,6 @@ namespace Gilded_Rose.IntegrationTests.Controllers
 
         }
 
-
-
         [Theory]
         [InlineData("/api/Users/authenticate")]
         public  void get_valid_user_with_wrong_password_should_return_password_incorrect(string url)
@@ -118,7 +116,6 @@ namespace Gilded_Rose.IntegrationTests.Controllers
             //Assert
             message.Should().Be("UserName or Password is incorrect");
         }
-
 
         [Theory]
         [InlineData("/api/Users/authenticate")]

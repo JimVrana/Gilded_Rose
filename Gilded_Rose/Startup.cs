@@ -12,6 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 using Gilded_Rose.Core.Interfaces;
 using Gilded_Rose.Infrastructure.Data;
 using Gilded_Rose.Infrastructure.Data.Repositories;
+using Gilded_Rose.Helpers;
 
 namespace Gilded_Rose
 {
@@ -30,11 +31,11 @@ namespace Gilded_Rose
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-         //   var appSettingsSection = Configuration.GetSection("AppSettings");
-          //  services.Configure<AppSettings>(appSettingsSection);
+            var appSettingsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettingsSection);
 
-         //   var appSettings = appSettingsSection.Get<AppSettings>();
-            var key = Encoding.ASCII.GetBytes("the quick brown fox jumped over the lazy dog");
+            var appSettings = appSettingsSection.Get<AppSettings>();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret); 
 
             services.AddAuthentication(x =>
             {

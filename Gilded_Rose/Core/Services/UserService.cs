@@ -10,16 +10,17 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Security.Claims;
 using Gilded_Rose.Core.Interfaces;
+using Gilded_Rose.Helpers;
 
 namespace Gilded_Rose.Core.Services
 {
     public class UserService : IUserService
     {
-       // private readonly AppSettings _appSettings;
+        private readonly AppSettings _appSettings;
 
-        public UserService()//IOptions<AppSettings> appSettings)
+        public UserService(IOptions<AppSettings> appSettings)
         {
-           // _appSettings = appSettings.Value;
+            _appSettings = appSettings.Value;
         }
 
         //sample user data 
@@ -78,7 +79,7 @@ namespace Gilded_Rose.Core.Services
             var tokenHandler = new JwtSecurityTokenHandler();
 
             //the secret would be stored elsewhere in a production environment
-            var SecretKey = Encoding.ASCII.GetBytes("the quick brown fox jumped over the lazy dog");
+            var SecretKey = Encoding.ASCII.GetBytes(_appSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
