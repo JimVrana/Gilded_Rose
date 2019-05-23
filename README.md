@@ -5,8 +5,8 @@
 * A list of valid users is contained in the UserService.  This would normally be pulled from active directory or a database.
   * Valid usernames/passwords/roles:
     * admin/admin/Admin
-    * jvrana/test/ApiUser
-    * testuser/test/User
+    * jvrana/passwordsAreFun/ApiUser
+    * testuser/password2/User
 	
 	
 
