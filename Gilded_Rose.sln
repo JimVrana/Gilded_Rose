@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gilded_Rose", "Gilded_Rose\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gilded_Rose.UnitTests", "Gilded_Rose.UnitTests\Gilded_Rose.UnitTests.csproj", "{C5666B39-9447-4F56-A9CC-61A0C469152E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Testing.Authentication.ClaimInjector", "AspNetCore.Testing.Authentication.ClaimInjector\AspNetCore.Testing.Authentication.ClaimInjector.csproj", "{C9EB3C55-8AEB-470C-BF57-34A53466022D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gilded_Rose.IntegrationTests", "Gilded_Rose.IntegrationTests\Gilded_Rose.IntegrationTests.csproj", "{82CB6A9F-E673-40B5-A87F-95D55883297F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{C5666B39-9447-4F56-A9CC-61A0C469152E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5666B39-9447-4F56-A9CC-61A0C469152E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5666B39-9447-4F56-A9CC-61A0C469152E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9EB3C55-8AEB-470C-BF57-34A53466022D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9EB3C55-8AEB-470C-BF57-34A53466022D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9EB3C55-8AEB-470C-BF57-34A53466022D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9EB3C55-8AEB-470C-BF57-34A53466022D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82CB6A9F-E673-40B5-A87F-95D55883297F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82CB6A9F-E673-40B5-A87F-95D55883297F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82CB6A9F-E673-40B5-A87F-95D55883297F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82CB6A9F-E673-40B5-A87F-95D55883297F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

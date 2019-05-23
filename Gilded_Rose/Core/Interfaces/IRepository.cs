@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Gilded_Rose.Core.Repositories
+namespace Gilded_Rose.Core.Interfaces
 {
     public interface IRepository<T> where T : BaseModel
     {
-        Task<T> GetById(int id);
-        Task<List<T>> ListAll();
+        T GetById(int id);
+        List<T> ListAll();
     }
 }

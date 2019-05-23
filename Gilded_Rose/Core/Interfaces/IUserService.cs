@@ -4,10 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Gilded_Rose.Core.Repositories
+namespace Gilded_Rose.Core.Interfaces
 {
-    public interface IItemRepository:IRepository<Item>
-    {
-
+    public interface IUserService    {
+        ApiUser Authenticate(string userName, string password);
     }
 }

@@ -7,7 +7,7 @@ namespace Gilded_Rose.Core.Shared
 {
     public class BaseModel
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+      //  [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
         public DateTime DateCreated { get; set; }
