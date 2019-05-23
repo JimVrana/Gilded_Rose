@@ -1,8 +1,20 @@
 # Gilded_Rose
 
+Assumptions:
+	If this were not a test assessment, the password would be encoded as a base64 string by the calling program and then decoded by the API.
+	A list of valid users is contained in the UserService.  This would normally be pulled from active directory or a database.
+		Valid usernames/passwords/roles:
+			admin/admin/Admin
+			jvrana/test/ApiUser
+			testuser/test/ApiUser
+	
+	
+
 I added a base entity class to include Id, date created and date modified to each object. Id the primary key of each.
 
 The item class will also contain an available quantity.  This would normally be separated out into an inventory system, but for a sample application I can run tests for availability of items.  
+
+Ordering of an item checks the available quantity and if the order quantity is less than the available quantity, the order is "placed".
 
 There are two user roles, one for general users, 'Users' and one for administrators, 'Admin'.  Api calls dictate which roles are able to call them.  
 
