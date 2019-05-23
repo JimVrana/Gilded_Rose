@@ -69,19 +69,22 @@ Sample Token response:
 
 Sample request with token:
 ```HTTP
-	GET /api/values HTTP/1.1
-	Host: localhost:44315
-	Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJyb2xlIjoiVXNlciIsIm5iZiI6MTU1ODQ0MTI0MywiZXhwIjoxNTU5MDQ2MDQzLCJpYXQiOjE1NTg0NDEyNDN9.Fq0OrDCZbXSTI1fGU_xh9NpVntiv4rN32W0xZqC6RbI
-	User-Agent: PostmanRuntime/7.13.0
-	Accept: */*
-	Cache-Control: no-cache
-	Postman-Token: 35824615-9a95-4e59-aecc-f1f16388924d,f5bb8e32-0b06-43a5-afab-9df8187961e1
-	Host: localhost:44315
-	accept-encoding: gzip, deflate
-	Connection: keep-alive
-	cache-control: no-cache
+POST /api/Order/5/1 HTTP/1.1
+Host: localhost:44382
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE1NTg2MzY3MjAsImV4cCI6MTU1ODcyMzEyMCwiaWF0IjoxNTU4NjM2NzIwfQ.2EY5iSmZiDPZlh44pSSFgttz8K-4bfm2I_s5WTc9znY
+User-Agent: PostmanRuntime/7.13.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 357fe52a-acc4-4cf3-80e0-a35d7d6794aa,d4568c43-69fc-40cd-906e-4d66d9eb61fc
+Host: localhost:44382
+accept-encoding: gzip, deflate
+content-length: 
+Connection: keep-alive
+cache-control: no-cache
 ```
 Sample response:
 ```JSON
-	["value1","value2"]
+{
+    "message": "Order successfully placed"
+}
 ```
